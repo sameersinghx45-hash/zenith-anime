@@ -1,5 +1,91 @@
 // Zenith Anime demo data. Replace sample titles with content you have rights to use.
-const animeData = [
+const animeData = [ 
+  {
+    id: "demon-slayer",
+    title: "Demon Slayer",
+    genre: "Action",
+    year: 2019,
+    episodes: "Official",
+    score: "—",
+    symbol: "滅",
+    palette: "linear-gradient(145deg, #8d273d, #19102d 75%)",
+    description: "Tanjiro Kamado begins a journey to protect his sister and fight demons.",
+    episodeNames: ["Official streaming page"],
+    videoUrls: [],
+    officialUrl: "https://www.crunchyroll.com/hi/series/GY5P48XEY/demon-slayer-kimetsu-no-yaiba"
+  },
+  {
+    id: "solo-leveling",
+    title: "Solo Leveling",
+    genre: "Action",
+    year: 2024,
+    episodes: "Official",
+    score: "—",
+    symbol: "影",
+    palette: "linear-gradient(145deg, #263c80, #11101f 75%)",
+    description: "Sung Jinwoo rises from a very weak hunter to a powerful fighter.",
+    episodeNames: ["Official streaming page"],
+    videoUrls: [],
+    officialUrl: "https://www.crunchyroll.com/series/GDKHZEJ0K/solo-leveling"
+  },
+  {
+    id: "naruto",
+    title: "Naruto",
+    genre: "Adventure",
+    year: 2002,
+    episodes: "Official",
+    score: "—",
+    symbol: "忍",
+    palette: "linear-gradient(145deg, #db762a, #25102d 75%)",
+    description: "Naruto dreams of becoming the Hokage of his village.",
+    episodeNames: ["Official streaming page"],
+    videoUrls: [],
+    officialUrl: "https://www.crunchyroll.com/hi/series/GY9PJ5KWR/naruto"
+  },
+  {
+    id: "one-piece",
+    title: "One Piece",
+    genre: "Adventure",
+    year: 1999,
+    episodes: "Official",
+    score: "—",
+    symbol: "☠",
+    palette: "linear-gradient(145deg, #267da1, #19102d 75%)",
+    description: "Luffy and his crew travel the seas in search of the legendary One Piece.",
+    episodeNames: ["Official streaming page"],
+    videoUrls: [],
+    officialUrl: "https://www.crunchyroll.com/series/GRMG8ZQZR/one-piece"
+  },
+  {
+    id: "blue-lock",
+    title: "Blue Lock",
+    genre: "Sports",
+    year: 2022,
+    episodes: "Official",
+    score: "—",
+    symbol: "⚽",
+    palette: "linear-gradient(145deg, #1465a0, #17102e 75%)",
+    description: "Young footballers compete to become Japan's best striker.",
+    episodeNames: ["Official streaming page"],
+    videoUrls: [],
+    officialUrl: "https://www.crunchyroll.com/series/G4PH0WEKE/blue-lock"
+  },
+  {
+    id: "jujutsu-kaisen",
+    title: "Jujutsu Kaisen",
+    genre: "Action",
+    year: 2020,
+    episodes: "Official",
+    score: "—",
+    symbol: "呪",
+    palette: "linear-gradient(145deg, #7542a0, #17102e 75%)",
+    description: "Yuji Itadori enters the world of cursed spirits and sorcerers.",
+    episodeNames: ["Official streaming page"],
+    videoUrls: [],
+    officialUrl: "https://www.crunchyroll.com/series/GRDV0019R/jujutsu-kaisen"
+  }
+];
+
   {
     id: "moonlit-ronin", title: "Moonlit Ronin", genre: "Action", year: 2025, episodes: 12, score: "9.1",
     symbol: "月", palette: "linear-gradient(145deg, #5b2d88, #19102d 75%)",
