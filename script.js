@@ -2,7 +2,7 @@ console.log("Zenith JS loaded");
 const animeData = [
   {
     id: "demon-slayer",
-    title: "Demon Slayer"
+    title: "Demon Slayer,"
     genre: "Action",
     year: 2019,
     episodes: "Official",
