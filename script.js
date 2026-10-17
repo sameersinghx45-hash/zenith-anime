@@ -1,4 +1,5 @@
 console.log("Zenith JS loaded");
+document.getElementById("animeGrid").innerHTML = "<h2 style='color:white'>JAVASCRIPT TEST OK</h2>";
 const animeData = [
   {document.getElementById("animeGrid").innerHTML = "<h2 style='color:white'>JavaScript is working!</h2>";
     id: "demon-slayer",
