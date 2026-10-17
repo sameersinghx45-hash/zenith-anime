@@ -1,6 +1,6 @@
 
 const animeData = [
-  {
+  {document.getElementById("animeGrid").innerHTML = "<h2 style='color:white'>JavaScript is working!</h2>";
     id: "demon-slayer",
     title: "Demon Slayer",
     genre: "Action",
