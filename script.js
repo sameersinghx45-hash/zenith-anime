@@ -1,7 +1,5 @@
-console.log("Zenith JS loaded");
 const animeData = [
-  {
-    {
+{
     id: "demon-slayer",
     title: "Demon Slayer",
     genre: "Action",
