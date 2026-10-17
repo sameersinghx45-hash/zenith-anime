@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #0b0711; --panel: #15101f; --panel2: #1c142a; --text: #f8f4ff;
+  --muted: #a89bbd; --purple: #a970ff; --purple2: #6c39d7; --line: #30213f;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: radial-gradient(ellipse at 80% 0%, #25123d 0, var(--bg) 36rem); color: var(--text); font-family: 'DM Sans', sans-serif; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+.topbar { min-height: 76px; padding: 0 clamp(18px, 5vw, 76px); display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #ffffff0e; gap: 18px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font: 700 15px 'Space Grotesk', sans-serif; letter-spacing: 1.4px; white-space: nowrap; }
+.brand b { color: var(--purple); }
+.brand-mark { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 11px 4px 11px 4px; background: linear-gradient(135deg, #c6a1ff, #6b35cf); color: white; font-size: 22px; }
+.nav { display: flex; gap: 10px; align-items: center; }
+.nav-link { border: 0; background: transparent; color: var(--muted); padding: 10px 13px; border-radius: 10px; }
+.nav-link.active, .nav-link:hover { color: white; background: #ffffff0b; }
+.count { display: inline-grid; place-items: center; min-width: 19px; height: 19px; padding: 0 5px; margin-left: 5px; border-radius: 10px; background: var(--purple2); color: white; font-size: 11px; }
+main { max-width: 1280px; margin: 0 auto; padding: 0 clamp(18px, 5vw, 76px) 60px; }
+.hero { min-height: 365px; display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; overflow: hidden; border-bottom: 1px solid #ffffff0d; }
+.hero-copy { padding: 52px 0; position: relative; z-index: 1; }
+.eyebrow { color: #c2a0ff; font-size: 10px; font-weight: 700; letter-spacing: 2px; margin: 0 0 15px; }
+.pulse { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #b88aff; box-shadow: 0 0 12px #a970ff; margin-right: 8px; }
+h1, h2, h3, p { margin-top: 0; }
+h1 { font: 700 clamp(42px, 6vw, 70px)/1.03 'Space Grotesk', sans-serif; letter-spacing: -2.5px; margin-bottom: 20px; }
+h1 span { color: var(--purple); }
+.hero-text { max-width: 420px; color: var(--muted); line-height: 1.7; font-size: 14px; margin-bottom: 25px; }
+.primary-btn { border: 0; border-radius: 10px; padding: 13px 17px; background: linear-gradient(100deg, #a970ff, #7e4be0); color: white; font-weight: 700; box-shadow: 0 8px 25px #7b3de633; }
+.primary-btn:hover { filter: brightness(1.12); transform: translateY(-1px); }
+.primary-btn span { margin-left: 14px; }
+.hero-art { height: 320px; position: relative; display: grid; place-items: center; }
+.hero-art::before { content: ''; position: absolute; width: min(310px, 70vw); height: min(310px, 70vw); border: 1px solid #b18aff2b; border-radius: 50%; box-shadow: 0 0 0 25px #a970ff08, 0 0 0 55px #a970ff05; }
+.hero-symbol { position: relative; z-index: 1; font: 700 clamp(130px, 20vw, 230px)/1 'Space Grotesk'; color: transparent; -webkit-text-stroke: 2px #c6a1ff; transform: skew(-9deg); text-shadow: 0 0 55px #a970ff4d; }
+.orb { position: absolute; border-radius: 50%; filter: blur(1px); }
+.orb-one { width: 70px; height: 70px; top: 42px; right: 18%; background: radial-gradient(circle at 30% 25%, #f4eaff, #a970ff 40%, #4c1a99); box-shadow: 0 0 40px #a970ff77; }
+.orb-two { width: 24px; height: 24px; bottom: 50px; left: 18%; background: #d7c0ff; box-shadow: 0 0 25px #a970ff; }
+.hero-label { position: absolute; right: 0; bottom: 42px; font-size: 9px; letter-spacing: 2px; line-height: 1.6; color: #b9a5d5; }
+.toolbar { display: flex; align-items: end; justify-content: space-between; gap: 18px; padding-top: 42px; }
+.toolbar .eyebrow { margin-bottom: 8px; }
+h2 { font: 600 clamp(25px, 3vw, 34px) 'Space Grotesk', sans-serif; margin-bottom: 0; letter-spacing: -.8px; }
+.search-box { display: flex; align-items: center; gap: 10px; width: min(330px, 100%); padding: 0 12px; background: #15101f; border: 1px solid var(--line); border-radius: 11px; color: var(--muted); }
+.search-box > span { font-size: 25px; }
+.search-box input { min-width: 0; flex: 1; background: transparent; color: white; border: 0; outline: 0; padding: 13px 0; font-size: 12px; }
+.search-box kbd { border: 1px solid #453354; border-radius: 4px; padding: 2px 6px; font-size: 10px; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; padding: 22px 0 24px; }
+.filter { background: transparent; border: 1px solid var(--line); color: var(--muted); padding: 8px 13px; border-radius: 9px; font-size: 12px; }
+.filter.active, .filter:hover { color: white; background: #7e4be027; border-color: #8754d7; }
+.anime-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.anime-card { min-width: 0; background: #120d1b; border: 1px solid #ffffff0d; border-radius: 14px; overflow: hidden; transition: transform .2s, border-color .2s; }
+.anime-card:hover { transform: translateY(-4px); border-color: #8e5ce466; }
+.poster { min-height: 190px; aspect-ratio: 4/4.5; display: flex; align-items: end; padding: 15px; position: relative; overflow: hidden; isolation: isolate; background: var(--poster-bg, linear-gradient(135deg,#48236b,#120d1b)); }
+.poster::before { content: ''; position: absolute; inset: 0; z-index: -2; background: radial-gradient(circle at 70% 25%, #ffffff33, transparent 25%), linear-gradient(145deg, transparent 30%, #08040dbb 100%); }
+.poster::after { content: attr(data-symbol); position: absolute; z-index: -1; top: 6%; right: 8%; font: 700 clamp(80px, 10vw, 130px)/1 'Space Grotesk'; color: #ffffff22; transform: rotate(8deg); }
+.poster-tag { background: #0b0711c9; border: 1px solid #ffffff24; color: #e6d6ff; border-radius: 6px; padding: 5px 8px; font-size: 9px; letter-spacing: 1px; }
+.card-body { padding: 14px; }
+.card-top { display: flex; justify-content: space-between; gap: 8px; align-items: start; }
+.card-title { font: 600 16px 'Space Grotesk', sans-serif; margin: 0 0 7px; line-height: 1.3; }
+.score { color: #d9c1ff; font-size: 11px; white-space: nowrap; }
+.card-meta { color: var(--muted); font-size: 11px; margin-bottom: 12px; }
+.card-actions { display: flex; gap: 8px; }
+.small-btn { flex: 1; padding: 9px 8px; border: 1px solid #4a345f; background: #21152f; color: #e7d9ff; border-radius: 8px; font-size: 11px; font-weight: 600; }
+.small-btn:hover { background: #39234f; }
+.small-btn.saved { color: #d4b6ff; border-color: #8e5ce4; }
+.empty-state { padding: 45px 0; text-align: center; color: var(--muted); }
+.hidden { display: none !important; }
+.episode-page { padding-top: 28px; }
+.back-btn { border: 0; background: transparent; color: #c7a7ff; padding: 8px 0 22px; }
+.episode-layout { display: grid; grid-template-columns: 280px 1fr; gap: 30px; }
+.episode-poster { min-height: 370px; border-radius: 16px; background: var(--poster-bg, linear-gradient(145deg,#54277a,#120d1b)); position: relative; overflow: hidden; }
+.episode-poster::after { content: attr(data-symbol); position: absolute; inset: 0; display: grid; place-items: center; color: #ffffff28; font: 700 180px 'Space Grotesk'; }
+.episode-info h2 { margin-bottom: 10px; }
+.meta, .description { color: var(--muted); line-height: 1.7; font-size: 13px; }
+.description { max-width: 720px; margin: 17px 0 22px; }
+.episodes-heading { margin: 30px 0 12px; font: 600 18px 'Space Grotesk'; }
+.episode-list { display: flex; flex-wrap: wrap; gap: 9px; }
+.episode-btn { background: #191023; border: 1px solid var(--line); color: #e8dcf7; border-radius: 8px; padding: 10px 13px; font-size: 12px; }
+.episode-btn.active { border-color: var(--purple); background: #6c39d74a; }
+.player-placeholder { margin-top: 18px; border: 1px dashed #65438a; background: #120d1b; min-height: 190px; border-radius: 13px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 25px; }
+.player-placeholder h3 { margin: 12px 0 8px; font: 600 16px 'Space Grotesk'; }
+.player-placeholder p { max-width: 500px; color: var(--muted); font-size: 12px; line-height: 1.6; margin-bottom: 8px; }
+.play-icon { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; background: #8c52df; padding-left: 3px; }
+.small-note { color: var(--muted); font-size: 11px; }
+.video-wrap video { width: 100%; max-height: 450px; margin-top: 18px; background: black; border-radius: 12px; }
+footer { border-top: 1px solid #ffffff0e; padding: 26px clamp(18px, 5vw, 76px); display: flex; justify-content: space-between; align-items: center; gap: 15px; color: var(--muted); font-size: 11px; }
+.footer-brand { font-size: 12px; }
+@media (max-width: 900px) { .anime-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .episode-layout { grid-template-columns: 220px 1fr; gap: 22px; } .episode-poster { min-height: 300px; } }
+@media (max-width: 650px) {
+  .topbar { min-height: 68px; padding: 0 16px; } .brand { font-size: 12px; gap: 7px; letter-spacing: .7px; } .brand-mark { width: 30px; height: 30px; }
+  .nav { gap: 2px; } .nav-link { padding: 9px 8px; font-size: 11px; }
+  main { padding: 0 16px 42px; } .hero { grid-template-columns: 1fr; min-height: auto; position: relative; } .hero-copy { padding: 46px 0 32px; } .hero-art { position: absolute; width: 44%; height: 180px; right: -5%; bottom: 5px; opacity: .38; } .hero-art::before { width: 160px; height: 160px; } .hero-symbol { font-size: 125px; } .hero-label { display: none; } .orb-one { width: 40px; height: 40px; top: 10px; } .orb-two { bottom: 15px; }
+  .toolbar { align-items: stretch; flex-direction: column; padding-top: 32px; } .search-box { width: 100%; } .filters { padding: 16px 0 20px; }
+  .anime-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; } .poster { min-height: 150px; padding: 10px; } .card-body { padding: 11px; } .card-title { font-size: 14px; } .score { font-size: 10px; } .card-actions { flex-direction: column; }
+  .episode-layout { grid-template-columns: 1fr; } .episode-poster { min-height: 260px; max-height: 300px; } .episode-poster::after { font-size: 130px; } footer { align-items: flex-start; flex-direction: column; padding: 22px 16px; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; } }

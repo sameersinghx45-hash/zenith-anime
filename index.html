@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10091c">
+  <title>Zenith Anime — Discover your next anime</title>
+  <meta name="description" content="Zenith Anime is a responsive anime catalogue demo with search, episode pages, and a watchlist.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" id="homeLink" aria-label="Zenith Anime home">
+      <span class="brand-mark">Z</span><span>ZENITH <b>ANIME</b></span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <button class="nav-link active" data-view="home">Discover</button>
+      <button class="nav-link" data-view="watchlist">My Watchlist <span id="watchCount" class="count">0</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse"></span> YOUR NEXT ADVENTURE STARTS HERE</p>
+        <h1>Find your next<br><span>obsession.</span></h1>
+        <p class="hero-text">Explore stories, save your favourites, and keep track of the episodes you want to watch.</p>
+        <button class="primary-btn" id="exploreBtn">Explore anime <span aria-hidden="true">↗</span></button>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orb orb-one"></div><div class="orb orb-two"></div>
+        <div class="hero-symbol">Z</div>
+        <div class="hero-label">BEYOND<br>THE ORDINARY</div>
+      </div>
+    </section>
+
+    <section class="toolbar" id="catalogue">
+      <div>
+        <p class="eyebrow">THE COLLECTION</p>
+        <h2 id="sectionTitle">Discover anime</h2>
+      </div>
+      <label class="search-box">
+        <span aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" placeholder="Search anime or genre..." autocomplete="off">
+        <kbd>/</kbd>
+      </label>
+    </section>
+
+    <div class="filters" id="filters" aria-label="Filter by genre">
+      <button class="filter active" data-genre="All">All titles</button>
+      <button class="filter" data-genre="Action">Action</button>
+      <button class="filter" data-genre="Fantasy">Fantasy</button>
+      <button class="filter" data-genre="Adventure">Adventure</button>
+      <button class="filter" data-genre="Drama">Drama</button>
+    </div>
+
+    <section class="anime-grid" id="animeGrid" aria-live="polite"></section>
+    <p class="empty-state hidden" id="emptyState">Nothing found. Try another title or genre.</p>
+
+    <section class="episode-page hidden" id="episodePage">
+      <button class="back-btn" id="backBtn">← Back to catalogue</button>
+      <div class="episode-layout">
+        <div class="episode-poster" id="episodePoster"></div>
+        <div class="episode-info">
+          <p class="eyebrow">ANIME DETAILS</p>
+          <h2 id="episodeTitle"></h2>
+          <p class="meta" id="episodeMeta"></p>
+          <p id="episodeDescription" class="description"></p>
+          <button class="primary-btn" id="episodeWatchlistBtn">＋ Add to watchlist</button>
+          <h3 class="episodes-heading">Episodes</h3>
+          <div id="episodeList" class="episode-list"></div>
+          <div class="player-placeholder" id="playerPlaceholder">
+            <div class="play-icon">▶</div>
+            <h3>Authorized player placeholder</h3>
+            <p>Select an episode, then add a streaming URL you have permission to use in this demo's data file. No copyrighted episodes are bundled with this website.</p>
+            <p class="small-note">Demo mode: no video source is configured.</p>
+          </div>
+          <div id="videoWrap" class="video-wrap hidden">
+            <video id="videoPlayer" controls playsinline preload="metadata"></video>
+            <p class="small-note">Only use video URLs you own or are authorized to stream.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#"><span class="brand-mark">Z</span><span>ZENITH <b>ANIME</b></span></a>
+    <p>Anime discovery demo · Use authorized artwork and streaming sources only.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
